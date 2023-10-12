@@ -55,6 +55,89 @@ select current_date();
 select hello() as salutation;
 
 #les conditions
+
+drop function if exists comparaison;
+delimiter $$
+create function comparaison(a int, b int)
+returns varchar(50)
+deterministic
+begin
+	declare result varchar(50);
+	if a>b then
+		set result = concat(a," est plus grande que ",b);
+    elseif a=b then
+		set result = concat(a," égale à  ",b);
+    else
+		set result = concat(a," est plus petite que ",b);
+    end if;
+	return result;
+end $$
+delimiter ;
+
+
+
+drop function if exists comparaison;
+delimiter $$
+create function comparaison(a int, b int)
+returns varchar(50)
+deterministic
+begin
+	declare result varchar(50);
+    set result = if(a<b,"petite",if(a=b,"egale","grande"));
+	return result;
+end $$
+delimiter ;
+
+select comparaison (2,3);
+
+
+
+drop function if exists jourSemaine;
+delimiter $$
+create function jourSemaine(j int)
+returns varchar(50)
+deterministic
+begin
+	declare result varchar(50);
+    set result = case j
+    when 1 then "Dimanche"
+    when 2 then "Lundi"
+    when 3 then "Mardi"
+    when 4 then "Mercredi"
+    when 5 then "Jeudi"
+    when 6 then "Vendredi"
+    when 7 then "Samedi"
+	else   "erreur"
+	end;    
+	return result;
+end $$
+delimiter ;
+
+
+drop function if exists jourSemaine;
+delimiter $$
+create function jourSemaine(j int)
+returns varchar(50)
+deterministic
+begin
+	declare result varchar(50);
+    set result = case 
+    when j=1 then "Dimanche"
+    when j=2 then "Lundi"
+    when j=3 then "Mardi"
+    when j=4 then "Mercredi"
+    when j=5 then "Jeudi"
+    when j=6 then "Vendredi"
+    when j=7 then "Samedi"
+	else   "erreur"
+	end;    
+	return result;
+end $$
+delimiter ;
+
+select jourSemaine(3);
+
+
 #les boucles
 
 #les fonctions
