@@ -137,6 +137,46 @@ delimiter ;
 
 select jourSemaine(3);
 
+# Equation premier degès
+# Ax+B=0
+
+#rappel mathématique
+#Si A=0 et B=0   --  x= toute valeur de R
+#Si A=0 et B!=0   --  x= Ensemble vide
+#Si A!=0          -- x = -B/A
+
+# Equation deuxième degès
+# Ax²+Bx+C=0
+
+#rappel mathématique
+#Si A=0 et B=0 et C=0   -- x= toute valeur de R
+#Si A=0 et B=0 et C!=0   -- x = ensemble vide
+#Si A=0 et B!=0    -- x = -C/B
+#Si A!=0        
+#     delta = b²-4AC
+#     Si delta <0    impossible dans R
+#     Si delta = 0  x1=x2=-B/2A
+#     Si delta >0  x1=-B-racine(delta)/2A   x2=-B+racine(delta)/2A
+     
+     
+#Exercice participation au prix de repas
+#Un patron d'usine dicide de participer aux prix de repas de ces ouvrier
+#il instaure les règles suivante
+#le taux de participation est de 30%
+#si le salaire de l'ouvrier est inférieur à 3000 dh la participation est marjorée de 10%
+#si l'ouvrier est mariée la participation est augmentée de 5%
+# et pour chaque enfant on va ajouter 5%
+# le taux de participation ne peut jamais dépasser 60%
+#ecrire une fonction mysql qui accepte les paramètres necessaires et qui affiche le montant de la participation
+
+
+
+
+
+
+
+
+
 
 #les boucles
 
