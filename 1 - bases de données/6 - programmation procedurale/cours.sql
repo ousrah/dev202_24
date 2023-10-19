@@ -356,6 +356,26 @@ Ecrire une fonction sommePaire qui permet de calculer la somme des n premier ent
 sans untilisation d'une incrementation par deux (utilisez le modulo)
 */
 
+drop function if exists sommePair;
+delimiter $$
+create function sommePair(n int)
+returns int
+deterministic
+
+begin
+	declare s int default 0;
+    declare i int default 0;
+    while (i<=n) do
+		if i%2=0 then
+			set s = s + i;
+		end if;
+        set i = i + 1;
+	end while;
+    return s;
+end $$
+delimiter ;
+select sommePair(12);
+
 
 /*
 ecrire une fonction qui permet de calculer le factoriel d'un entier
@@ -367,7 +387,26 @@ Exemple 5!=5*4*3*2
 use librairie_201;
 select * from ecrivain;
 
+drop function if exists Factoriel;
+delimiter $$
+create function Factoriel(n int)
+returns int
+deterministic
 
+begin
+	declare res int default 1;
+    declare i int default 1;
+ 		repeat 
+			set  res = res * i;
+			set i = i + 1;
+		until i > n end repeat;
+    return res;
+end $$
+delimiter ;
+
+select Factoriel(0);
+select Factoriel(1);
+select Factoriel(5);
 
 
 
