@@ -25,7 +25,7 @@ insert into produit values (1,'table',20),(2,'chaise',60),(3,'armoire',5);
 
 insert into commande values (1,'2023-10-26');
 
-insert into ligne values (1,1,2,500),(1,2,3,400),(2,3,4,200);
+insert into ligne values (1,1,2,500);
 
 update produit set qtestock = qtestock-2 where id_produit=1;
 
@@ -54,7 +54,7 @@ select * from produit;
 
 drop trigger if exists t2 ;
 delimiter $$
-create trigger t2 after delete on ligne for each rowt1t1
+create trigger t2 after delete on ligne for each row
 begin
 	update produit set qtestock = qtestock+old.qte where id_produit = old.id_produit;
 
