@@ -223,3 +223,44 @@ END$$
 delimiter ;
 
 update ingredients set puing = 40 where numing = 2;
+
+#trigger avec curseur
+
+DROP TRIGGER IF EXISTS ex3;
+delimiter $$
+CREATE TRIGGER ex3
+  AFTER UPDATE
+  ON Ingredients FOR EACH ROW
+BEGIN
+  IF NEW.PUIng != OLD.PUIng THEN
+    BEGIN 
+      DECLARE flag BOOLEAN default FALSE;
+      DECLARE num, qte INT;
+      declare price float;
+      DECLARE cur1 CURSOR FOR   SELECT NumRec, QteUtilisee
+								FROM Composition_Recette
+								WHERE NumIng = NEW.NumIng;	
+      DECLARE CONTINUE HANDLER FOR NOT FOUND SET flag = TRUE;
+
+      OPEN cur1;
+        loop1: LOOP
+          FETCH cur1 INTO num, qte;
+          IF flag THEN
+            LEAVE loop1;
+          END IF;
+		  select sum(cr.qteutilisee * i.puIng) into price from composition_recette cr join ingredients i on cr.numIng = i.numing where numrec = num;
+          UPDATE Recettes SET prix = price	WHERE NumRec = num;
+        END LOOP;
+      CLOSE cur1;
+    END;
+  END IF;
+END$$
+delimiter ;
+
+
+alter table recettes add prix float default 0;
+
+
+
+
+
