@@ -3,11 +3,9 @@
 Base de données ‘Gestion_vols’ :
 */
 
-use vols_203;
+use vols_202;
 select * from pilote;
 alter table pilote add salaire float;
-
-select ceiling(rand()*24);
 
 
 #1)	Réalisez un curseur en lecture seule avec déplacement vers l’avant qui extrait la liste des pilotes avec pour informations l’identifiant, le nom et le salaire du pilote ;
@@ -64,7 +62,7 @@ begin
 				end if;
                 select numpilote,nom,salaire from pilote where numpilote =idp;
 
-				select concat('Le pilote ', nom, ' est affecte est vols ')  from pilote where numpilote =idp;
+				select concat('Le pilote ', nom, ' est affecté est vols ')  from pilote where numpilote =idp;
                 begin
 					declare vd varchar(50);
                     declare va varchar(50);
@@ -80,7 +78,7 @@ begin
                             if flag2 then
 								leave b2;
 							end if;
-							select concat("Ville depart : ",vd," Ville d'arrivée : ",vd);
+							select concat("Ville depart : ",vd," Ville d'arrivée : ",va);
                             set nbVols = nbVols+1;
                         end loop b2;
 							
@@ -104,6 +102,10 @@ begin
 end $$
 delimiter ;
 call q1();
+
+
+
+
 
 
 

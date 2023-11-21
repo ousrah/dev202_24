@@ -258,6 +258,7 @@ END$$
 delimiter ;
 
 
+
 alter table recettes add prix float default 0;
 
 
