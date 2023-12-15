@@ -1,0 +1,11 @@
+
+
+#backup/restore
+
+mongodump --db dblp --out=c:\users\9571\desktop 
+
+mongorestore --db dblp --drop c:\users\9571\desktop\dblp
+
+
+
+mongodump --authenticationDatabase admin --username admin --password myPassWord --db dblp --out=c:\users\9571\desktop  
