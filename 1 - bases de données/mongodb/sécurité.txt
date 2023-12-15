@@ -1,0 +1,14 @@
+use admin
+
+db.createUser({user: "dbsportifsUser",pwd: "password","roles":[{"role":"dbAdmin","db":"dbsportifs"}]})
+
+
+C:\Program Files\MongoDB\Server\7.0\binmongod.cfg
+security:
+  authorization: enabled
+
+redémarrer mongo server
+
+
+
+mongodb://manager:password@localhost:27017/dbsportifs?authSource=admin

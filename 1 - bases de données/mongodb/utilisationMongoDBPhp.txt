@@ -1,0 +1,50 @@
+...les indexes
+les validations
+...la gestion des utilisateurs
+...la connection de python su mongodb
+
+la connection de php sur mongodb
+
+#etape 1
+-- verifier la version de php
+-- télécharger l'extension de mongodb pour la version php utilisée
+    https://github.com/mongodb/mongo-php-driver/releases
+
+
+	https://github.com/mongodb/mongo-php-driver/releases/download/1.17.0/php_mongodb-1.17.0-8.2-ts-x64.zip
+
+
+-- dézipez le fichier téléchargé et placer son contenu dans le dossier ext de php
+
+C:\wamp64\bin\php\php8.2.0\ext
+
+-- activier cette extension dans le fichier php.ini
+extension=php_mongodb
+
+-- redémarrer le serveur php
+
+
+-- vérifier la bonne execution de cette extension
+http://localhost/?phpinfo=-1#module_mongodb
+
+
+#etape 2
+-- installer composer
+https://getcomposer.org/Composer-Setup.exe
+
+
+-- vérifier l'installation de composer sur la ligne de commande
+c:\> composer --version
+
+-- créer le dossier du nouveau site
+C:\wamp64\www
+-- creer le fichier composer.json vide
+{}
+
+-- installer le package mongodb/mongodb avec composer dans le nouveau site
+composer require mongodb/mongodb --ignore-platform-reqs
+
+
+#etape3
+-- création de notre page web qui peut se connecter sur mongodb a partir de php
+

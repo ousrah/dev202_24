@@ -1,0 +1,13 @@
+db.runCommand({collMod:"dblp", validator:{
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'title'
+    ],
+    properties: {
+      year: {
+        minimum: 500
+      }
+    }
+  }
+}})
