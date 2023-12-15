@@ -1,7 +1,16 @@
-use admin
 
+//admin de la  base de données dbsportifs
 db.createUser({user: "dbsportifsUser",pwd: "password","roles":[{"role":"dbAdmin","db":"dbsportifs"}]})
 
+
+//admin de toutes les bases de données
+db.createUser(
+  {
+    user: "admin",
+    pwd: "password",
+    roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+  }
+)
 
 C:\Program Files\MongoDB\Server\7.0\binmongod.cfg
 security:

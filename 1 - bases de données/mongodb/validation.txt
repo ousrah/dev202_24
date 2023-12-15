@@ -1,3 +1,4 @@
+sur Mongosh : 
 db.runCommand({collMod:"dblp", validator:{
   $jsonSchema: {
     bsonType: 'object',
@@ -6,8 +7,24 @@ db.runCommand({collMod:"dblp", validator:{
     ],
     properties: {
       year: {
-        minimum: 500
+        minimum: 500,
+maximum:2020
       }
     }
   }
 }})
+
+Dans l'anglet validation de mongo db compass
+{
+  $jsonSchema: {
+    bsonType: 'object',
+    required: [
+      'title'
+    ],
+    properties: {
+      year: {
+        minimum: 500,
+maximum:2020
+      }
+    }
+  }
