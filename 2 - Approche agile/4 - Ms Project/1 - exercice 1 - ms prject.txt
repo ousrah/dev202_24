@@ -1,0 +1,34 @@
+Projet : Gestion cabinet Medecin
+Analyse des besoins
+Conception de l'application
+reunion de validation
+maquetage (ecrans manuels ou avec logiciel -figma-)
+les diagrammes de classes, sequences, cas d'utlisation
+la structure de la base de données (MPD)
+reunion de validation
+realisation
+design
+creation de l'interface graphique
+creation des menus
+gestion des patients
+liste des patients 
+ajout de patient
+modification de patient
+suppression de patient
+recherche multicrière des patients
+gestion des consultations
+gestion des rendez-vous
+reservation des rendez-vous
+gestion ordonnances
+gestion des modèles d'ordonnance
+imprimer les modèles
+reunion de demonstration
+rectifications
+test
+installation
+formation
+support continue
+
+
+Diagramme de gantt
+diagramme de pert
