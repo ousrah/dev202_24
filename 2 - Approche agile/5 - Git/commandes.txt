@@ -1,0 +1,37 @@
+git --version
+git config --list
+git config --global user.name "votre nom"
+git config --global user.email "nom@dom.com"
+git status
+git init
+nano file1.txt
+git add file1.txt
+git add . 
+git add --all         ou           git add -A  (meme chose)
+git add -u
+git commit
+git commit -m "message"
+git commit -a -m "message"
+.gitignore
+   myfile.txt
+   /*.jpg
+   images/*.jpg
+   images
+git log
+git log --oneline
+git log -n 2
+git log --all
+git log -p file3.txt
+git log --graph
+git log --decorate
+git diff
+git diff -p file3.txt
+
+git checkout
+git revert
+git reset
+    --hard
+    --soft
+    --mixed
+
+
