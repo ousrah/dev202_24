@@ -1,0 +1,21 @@
+version: '3'
+services:
+ 
+  db:
+    image: mysql:8
+    container_name: db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3309:3306"
+    environment:
+      MYSQL_DATABASE: ismo
+      MYSQL_ROOT_PASSWORD: 123456
+
+    volumes:
+      - ./mysql/dbdata/:/var/lib/mysql/
+    #  - ./mysql/my.cnf:/etc/mysql/my.cnf
+
+
+
+ 
