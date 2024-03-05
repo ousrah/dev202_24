@@ -1,0 +1,29 @@
+Méthode 1 d'installation
+	composer global require laravel/installer
+	laravel new nom_du_project
+
+méthode 2 d'installation
+	composer create-project laravel/laravel nom_du_project
+
+
+
+méthode 3 d'installation
+	git clone https://github.com/laravel/laravel.git nom_du_project	
+	renommer .env.example en .env
+	php artisan key:generate
+	composer install
+
+
+
+php artisan serve
+
+php artisan migrate
+php artisan db:seed
+
+php artisan make:controller TestController
+
+php artisan make:model test
+
+php artisan make:model test2 -mc
+
+

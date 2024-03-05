@@ -1,0 +1,52 @@
+// Définir une route simple pour la page d'accueil
+Route::get('/', function () {
+    return view('welcome');
+});
+
+// Définir une route qui retourne une chaine
+Route::get('/hello', function () {
+    return "Hello
+});
+
+// Définir une route avec un paramètre
+Route::get('/user/{id}', function ($id) {
+    return "Utilisateur avec l'ID : $id";
+});
+
+// Définir une route avec un contrôleur
+Route::get('/dashboard', 'DashboardController@index');
+
+// Définir une route avec plusieurs méthodes HTTP
+Route::match(['get', 'post'], '/profile', function () {
+    return 'Cette route accepte les requêtes GET et POST';
+});
+
+// Définir une route avec un nom pour faciliter la génération d'URL
+Route::get('/admin', 'AdminController@index')->name('admin');
+
+// Groupe de routes avec un préfixe et un middleware
+Route::prefix('admin')->middleware('auth')->group(function () {
+    Route::get('/dashboard', 'AdminDashboardController@index');
+    Route::get('/users', 'AdminUserController@index');
+});
+
+// Redirection vers une autre route
+Route::redirect('/old-url', '/new-url');
+
+// Générer une URL à partir du nom de la route
+$url = route('admin');
+
+//retourne toutes les routes pour les cruds
+Route::resource('posts', PostController::class);
+verb          URI                      Action         Route Name
+-----------------------------------------------------------------
+GET           /posts                   index          posts.index
+GET           /posts/create            create         posts.create
+POST          /posts                   store          posts.store
+GET           /posts/{post}            show           posts.show
+GET           /posts/{post}/edit       edit           posts.edit
+PUT/PATCH     /posts/{post}            update         posts.update
+DELETE        /posts/{post}            destroy        posts.destroy
+
+//retourne toutes les routes pour les cruds sauf destroy
+Route::resource('posts', PostController::class)->except(['destroy']);
