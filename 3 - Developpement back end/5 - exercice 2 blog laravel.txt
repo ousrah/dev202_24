@@ -32,8 +32,8 @@ Comments(id, comment, post_id, article_id, user_id)
 
 6 - configure le seeder pour : 
 	- générer les roles suivants :  ('admin', 'publisher', 'author', 'guest')
-	- créer 10 utilisateurs avec chaqun deux roles aleatoires
-	- créer 10 posts et 10 articles avec des images -fak()->urlImage() et pour chaque post/article générer 10 commentaires.
+	- créer 10 utilisateurs avec chaqun deux roles aleatoires (sans répétition)
+	- créer 10 posts et 10 articles avec des images -fake()->urlImage() et pour chaque post/article générer 10 commentaires.
 
 7 - Cherche un moyen de remplir les images avec des images réel en utilisant l'api theCatApi ou theDogApi
 
@@ -45,4 +45,4 @@ Comments(id, comment, post_id, article_id, user_id)
 
 11 - le clique sur le titre doit afficher la page de l'article/post selectionné avec tous ces commentaire
 
-12 - le clique sur le nom de l'auteur affiche tous les artiesl/posts rédigés par lui
+12 - le clique sur le nom de l'auteur affiche tous les articles/posts rédigés par lui
