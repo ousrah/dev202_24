@@ -1,4 +1,14 @@
+1 - faire les étapes du tutoriel suivant après le configuration de votre app password sur gmail
+
+gmail.com -> gérer votre compte -> sécurité -> activer la vérification en deux étapes -> Mots de passe des applications -> add app
+
 https://www.itsolutionstuff.com/post/laravel-10-send-email-tutorial-exampleexample.html
+
+2 - Ajouter un formulaire a votre projet dans lequel vous aurez la possibilité d'envoyé un email en entrant
+- L'adresse email du distinataire
+- L'objet de l'email
+- Le contenu (body) de l'email
+
 
 https://www.itsolutionstuff.com/post/laravel-custom-login-and-registration-exampleexample.html
 
@@ -11,11 +21,11 @@ https://www.itsolutionstuff.com/post/laravel-custom-email-verification-system-ex
 
 .env
 ....
-MAIL_MAILER=smtp
+MAIL_MAILER=smtp  #Sample Mail Transfer Protocol
 MAIL_HOST=smtp.gmail.com
 MAIL_PORT=465
 MAIL_USERNAME=ousrah@gmail.com
-MAIL_PASSWORD=xxxxxxxxxxxxxxxxxx
+MAIL_PASSWORD=xxxxxxxxxxxxxxxxxx  #c'est le mot de passe lié à l'application
 MAIL_ENCRYPTION=null
 MAIL_FROM_ADDRESS=ousrah@gmail.com
 MAIL_FROM_NAME="mailIsmo"
