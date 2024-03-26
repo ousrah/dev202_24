@@ -1,0 +1,64 @@
+install tailwind
+
+https://tailwindcss.com/docs/guides/laravel
+add colors to theme with
+
+
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors')
+export default {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  theme: {
+
+          colors: {
+            transparent: 'transparent',
+            current: 'currentColor',
+            black: colors.black,
+            white: colors.white,
+            red: colors.red,
+            orange: colors.orange,
+            yellow: colors.yellow,
+            green: colors.green,
+            teal: colors.teal,
+            blue: colors.blue,
+            indigo: colors.indigo,
+            purple: colors.purple,
+            pink: colors.pink,
+            gray: colors.gray,
+            emerald: colors.emerald,
+            indigo: colors.indigo,
+            yellow: colors.yellow,
+          },
+        },
+      
+  plugins: [],
+}
+
+
+
+
+
+
+
+install jquery with vite
+
+https://laracoding.com/how-to-install-and-use-jquery-with-laravel-vite/
+
+
+
+install axios with vite
+
+npm install axios
+
+into resources/js/app.js
+
+import axios from "axios";
+window.axios = axios;
+
+- exercice upload picture 
+	php artisan storage:link
+	voir dossier 9
