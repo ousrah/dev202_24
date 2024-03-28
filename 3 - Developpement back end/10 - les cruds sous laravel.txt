@@ -1,0 +1,28 @@
+En se basant sur le tutoriel suivant:
+
+https://www.itsolutionstuff.com/post/laravel-10-crud-application-example-tutorialexample.html
+
+réaliser les tâches suivantes
+- afficher la liste des produits
+- paginer les résultats
+- ajouter un nouveau produit
+- afficher les details d'un produit
+- modifier un produit existant
+
+
+--Travail supplémentaire
+	- supprimer un produit (avec confirmation)
+	- ajouter une zone de recheche qui affiche les produits dont le nom contient le mot tapé
+
+
+NB: ne pas utiliser livewire, vuejs ou autre framework front end, travailler avec laravel de base. tel que dans le tutoriel suivant:
+
+https://raviyatechnical.medium.com/laravel-jetstream-crud-laravel-10-livewire-3-crud-with-alpine-js-tailwind-css-example-01191c76be65
+
+
+
+- pour plus de details sur la pagination voir le tutoriel suivant :
+https://www.positronx.io/laravel-pagination-example-with-bootstrap-tutorial/
+
+- pour remplacer bootstrap par tailwind voir le tutoriel suivant :
+https://tailwindcss.com/docs/guides/laravel#vite

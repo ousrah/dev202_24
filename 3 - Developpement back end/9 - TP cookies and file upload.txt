@@ -1,0 +1,29 @@
+to register a new cookie
+       Cookie::queue('nom_txt', $nom, 6000000); // expires in 1 minute
+
+
+to read coockei
+{{Cookie::get("nom_txt")}}
+
+
+
+add $table->rememberToken(); to user migration table
+
+in login view
+<div class="form-group mb-3">
+      <label for="remember">Remember me</label>
+      <input type="checkbox" name="remember" value="1">
+</div>
+
+ 
+
+in login methode
+
+Auth::login($user, $request->get('remember'));
+
+
+https://codeanddeploy.com/blog/laravel/how-to-add-remember-me-functionality-to-your-laravel-8-login
+
+
+
+
